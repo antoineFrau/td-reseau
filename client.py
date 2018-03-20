@@ -1,7 +1,6 @@
 import socket
 import random
 import json
-prenom = ["Adam","Alex","Alexandre","Alexis"]
 
 
 host = 'localhost'  # as both code is running on same pc
@@ -21,8 +20,7 @@ while len(dataToSend) >= 2:
 	title = dataJsonify["title"]
 	content = dataJsonify["content"]
 	if title == "TimeFromServ":
-		# dataTime, = struct.unpack('!I', content)
-		# print "%x " %dataTime
 		print "L'heure du serveur est : "+content
 	dataToSend = {}
+
 client_socket.close()  # close the connection
